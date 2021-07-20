@@ -1,2 +1,2 @@
-# algorithms_dataStructures
+# algorithms-exercises
 Created with CodeSandbox
