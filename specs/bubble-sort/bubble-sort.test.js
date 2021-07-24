@@ -12,26 +12,21 @@
 
 function bubbleSort(nums) {
   // code goes here
-  var isSwap = false;
-  for (var i = 0; i < nums.length; i++) {
-    for (var j = 1; j < nums.length; j++) {
-      if (nums[i] > nums[j]) {
-        var temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-        isSwap = true;
-        i++;
-      } else {
-        i++;
+  let isSwapped = false;
+
+  do {
+    isSwapped = false;
+
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] > nums[i + 1]) {
+        //swap
+        const temp = nums[i + 1];
+        nums[i + 1] = nums[i];
+        nums[i] = temp;
+        isSwapped = true;
       }
     }
-    if (!isSwap) {
-      return nums;
-    } else {
-      i = -1;
-      isSwap = false;
-    }
-  }
+  } while (isSwapped);
   return nums;
 }
 
