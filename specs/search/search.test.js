@@ -6,13 +6,15 @@
 function linearSearch(id, array) {
   // code goes here
 
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].id === id) {
-      return array[i];
-    }
-  }
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i].id === id) {
+  //     return array[i];
+  //   }
+  // }
 
-  return null;
+  // return null;
+
+  return array.filter((item) => item.id === id)[0];
 }
 
 function binarySearch(id, array) {
