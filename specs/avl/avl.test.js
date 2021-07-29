@@ -23,10 +23,43 @@
 
 class Tree {
   // code goes here
+  constructor() {
+    this.root = null;
+  }
+
+  add(value) {
+    if (!this.root) {
+      this.root = new Node(value);
+    } else {
+      this.root.add(value);
+    }
+  }
+  toObject() {
+    return this.root;
+  }
 }
 
 class Node {
   // code also goes here
+  constructor(value) {
+    this.left = null;
+    this.right = null;
+    this.value = value;
+    this.height = 1;
+  }
+
+  add(value) {
+    // check to go left or right
+    if (value > this.value) {
+      if (this.left) {
+      }
+    }
+    //find spot to add
+
+    // update height
+  }
+
+  balance() {}
 }
 
 // unit tests
